@@ -2,24 +2,25 @@
 <html lang="FR">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Js - partie 2 - exercice 4</title>
     </head>
     <body>
         <script>
-            var note = parseInt(prompt('donnez une note', 'votre note'));
-
-            if (note <= 3 ) {
-            alert('nul');
-            } else if (note <= 6) {
-            alert('moyen');
-            } else if (note <= 9) {
-            alert('bien');
+            var note = parseInt(prompt('donnez une note de 0 a 10', 'votre note'));
+            var message ='note incorrect';
+            if ((note >= 0) && (note < 4 )) {
+            message = 'nul';
+            } else if ((note >= 4) && (note <= 6)) {
+            message = 'moyen';
+            } else if ((note > 6) && (note < 8)) {
+            message = 'assez-bien';
+            } else if ((note >= 8) && (note < 10)) {
+            message = 'assez-bien';
             } else if (note == 10) {
-            alert('trés bien');
-            } else {
-            alert('note incorrect');
+            message = 'excellent';
             }
+            alert(message)
         </script>
     </body>
 </html>
